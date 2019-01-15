@@ -22,13 +22,12 @@ class LandmarksController < ApplicationController
   
   post '/landmarks' do
     @landmark = Landmark.create(params['landmark'])
-    
     redirect "/landmarks"
   end
   
   patch '/figures/:id' do
-    @figure = Figure.find(params['id'])
-    @figure.update(params['figure'])
+    @landmark = Landmark.find(params['id'])
+    @figure.update(params['landmark'])
     if !params['title']['name'].empty?
       @figure.titles << Title.create(params['title'])
     end
