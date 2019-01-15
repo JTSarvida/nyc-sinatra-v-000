@@ -24,7 +24,7 @@ class LandmarksController < ApplicationController
     @landmark = Landmark.create(params['landmark'])
     
     if !params['landmark']['name'].empty?
-      @figure.titles << Title.create(params['title'])
+      @landmark.titles << Title.create(params['title'])
     end
     
     if !params['landmark']['name'].empty?
