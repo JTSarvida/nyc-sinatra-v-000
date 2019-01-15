@@ -21,7 +21,7 @@ class LandmarksController < ApplicationController
   end
   
   post '/landmarks' do
-    @landmark = Landmark.create(params['figure'])
+    @landmark = Landmark.create(params['landmark'])
     
     if !params['title']['name'].empty?
       @figure.titles << Title.create(params['title'])
