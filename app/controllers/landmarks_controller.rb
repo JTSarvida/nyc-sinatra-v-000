@@ -7,7 +7,7 @@ class LandmarksController < ApplicationController
   
   get '/landmarks' do
     @figures = Figure.all
-    erb :'/figures/index'
+    erb :'/landmarks/index'
   end
   
   get '/landmarks/:id' do
