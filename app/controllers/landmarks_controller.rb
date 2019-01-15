@@ -20,7 +20,7 @@ class LandmarksController < ApplicationController
     erb:'/landmarks/edit'
   end
   
-  post '/figures' do
+  post '/landmarks' do
     @figure = Figure.create(params['figure'])
     
     if !params['title']['name'].empty?
