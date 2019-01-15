@@ -27,7 +27,7 @@ class LandmarksController < ApplicationController
   
   patch '/landmarks/:id' do
     @landmark = Landmark.find(params['id'])
-    @figure.update(params['landmark'])
+    @landmark.update(params['landmark'])
     @figure.save
     redirect "/landmarks/#{@landmark.id}"
   end
