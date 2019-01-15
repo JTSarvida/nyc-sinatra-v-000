@@ -17,7 +17,7 @@ class LandmarksController < ApplicationController
   
   get '/landmarks/:id/edit' do
     @landmark = Landmark.find(params['id'])
-    erb:'/figures/edit'
+    erb:'/landmarks/edit'
   end
   
   post '/figures' do
