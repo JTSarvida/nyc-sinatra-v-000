@@ -1,15 +1,15 @@
-it "allows you to view the form to edit a single landmark" do
-    @landmark = Landmark.first
-    get "/landmarks/#{@landmark.id}/edit"
-
-    expect(last_response.status).to eq(200)
-    expect(last_response.body).to include('<form')
-    expect(last_response.body).to include('landmark[name]')
-    expect(last_response.body).to include('landmark[year_completed]')
-    expect(last_response.body).to include(@landmark.name)
-    expect(last_response.body).to include(@landmark.year_completed.to_s)
-
-  end
+<!--it "allows you to view the form to edit a single landmark" do  -->
+<!--    @landmark = Landmark.first -->
+<!--    get "/landmarks/#{@landmark.id}/edit" --> 
+<!--
+<!--    expect(last_response.status).to eq(200) --> 
+<!--    expect(last_response.body).to include('<form') -->
+<!--    expect(last_response.body).to include('landmark[name]') -->
+<!--    expect(last_response.body).to include('landmark[year_completed]') -->
+<!--    expect(last_response.body).to include(@landmark.name) -->
+<!--    expect(last_response.body).to include(@landmark.year_completed.to_s) -->
+<!--
+ <!-- end -->
 
 <!-- add content here -->
 <h1>Edit <%=@landmark.name%></h1>
